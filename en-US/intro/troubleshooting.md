@@ -31,6 +31,19 @@ sort: 2
 - Causes: it happens when Windows users install Git Bash without enabling the `cmd` option
 - Solution: reinstall and enable `cmd` option.
 
+-----
+
+- Error: `git push` fails with
+
+    > fatal: Could not read from remote repository.
+    > 
+    > Please make sure you have the correct access rights and the repository exists.
+
+- Causes: gogs user account does not have a proper shell set in `/etc/passwd`.
+- Solution: run `usermod -s /bin/bash [user]`.
+
+
+
 ## Form Validation
 
 - Error: `Repository/User name contains illegal characters`
